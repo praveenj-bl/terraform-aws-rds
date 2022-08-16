@@ -17,6 +17,7 @@ resource "aws_db_instance" "db_instance" {
   username                            = var.username
   password                            = var.password
   iam_database_authentication_enabled = var.iam_database_authentication_enabled
+  parameter_group_name                = "default.mysql5.7"
   skip_final_snapshot                 = true
 
 }
