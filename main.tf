@@ -9,14 +9,16 @@ locals {
 
 resource "aws_db_instance" "db_instance" {
 
-  allocated_storage   = var.allocated_storage
-  engine              = local.engine
-  engine_version      = local.engine_version
-  instance_class      = var.instance_class
-  db_name             = var.db_name
-  username            = var.username
-  password            = var.password
-  skip_final_snapshot = true
+  allocated_storage                   = var.allocated_storage
+  engine                              = local.engine
+  engine_version                      = local.engine_version
+  instance_class                      = var.instance_class
+  db_name                             = var.db_name
+  username                            = var.username
+  password                            = var.password
+  iam_database_authentication_enabled = var.iam_database_authentication_enabled
+  enabled_cloudwatch_logs_exports     = var.enabled_cloudwatch_logs_exports
+  skip_final_snapshot                 = true
 
 }
 
