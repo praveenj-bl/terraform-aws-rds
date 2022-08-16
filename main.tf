@@ -17,7 +17,6 @@ resource "aws_db_instance" "db_instance" {
   username                            = var.username
   password                            = var.password
   iam_database_authentication_enabled = var.iam_database_authentication_enabled
-  enabled_cloudwatch_logs_exports     = var.enabled_cloudwatch_logs_exports
   skip_final_snapshot                 = true
 
 }
