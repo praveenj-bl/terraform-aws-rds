@@ -15,6 +15,11 @@ variable "region" {
   default = "us-east-2"
 }
 
+variable "domain_iam_role_name" {
+  type        = string
+  default     = "AWSdevopscerttaskrole"
+  description = "Iam roles for db"
+}
 
 # variable "associate_security_group_ids" {
 #   type        = list(string)
@@ -303,14 +308,14 @@ variable "performance_insights_retention_period" {
 
 variable "enabled_cloudwatch_logs_exports" {
   type        = list(string)
-  default     = []
+  default     = ["error", "audit"]
   description = "List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on engine): alert, audit, error, general, listener, slowquery, trace, postgresql (PostgreSQL), upgrade (PostgreSQL)."
 }
 
 variable "ca_cert_identifier" {
   type        = string
   description = "The identifier of the CA certificate for the DB instance"
-  default     = null
+  default     = "rds-ca-2019"
 }
 
 variable "monitoring_interval" {
