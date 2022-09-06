@@ -15,17 +15,6 @@ variable "region" {
   default = "us-east-2"
 }
 
-variable "domain_iam_role_name" {
-  type        = string
-  default     = "AWSdevopscerttaskrole"
-  description = "Iam roles for db"
-}
-
-# variable "associate_security_group_ids" {
-#   type        = list(string)
-#   default     = []
-#   description = "The IDs of the existing security groups to associate with the DB instance"
-# }
 
 variable "database_name" {
   type        = string

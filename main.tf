@@ -78,7 +78,7 @@ resource "aws_db_instance" "db_instance" {
 
   vpc_security_group_ids = var.security_group_ids
   db_subnet_group_name   = aws_db_subnet_group.subnet_group.name
-  domain_iam_role_name   = var.domain_iam_role_name
+
 
   availability_zone = local.availability_zone
 
